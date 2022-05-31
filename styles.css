@@ -15,3 +15,17 @@
   width: 20px;
   background-color: blue;
 }
+
+.grid .taken {
+  background-color: red;
+}
+
+.player-1 {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.player-2 {
+  background-color: blue;
+  border-radius: 10px;
+}
