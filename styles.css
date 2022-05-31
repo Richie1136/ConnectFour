@@ -1,3 +1,17 @@
 .connectFour {
   text-align: center;
 }
+
+.grid {
+  display: flex;
+  border: 1px solid black;
+  height: 120px;
+  width: 140px;
+  flex-wrap: wrap;
+}
+
+.grid > div {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
