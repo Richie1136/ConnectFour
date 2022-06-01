@@ -12,6 +12,13 @@ for (let i = 0; i < squares.length; i++) {
         squares[i].classList.add('player-1')
         currentPlayer = 2
         whosTurn.innerHTML = currentPlayer
+      } else if (currentPlayer === 2) {
+        squares[i].classList.add('taken')
+        squares[i].classList.add('player-2')
+        currentPlayer = 1
+        whosTurn.innerHTML = currentPlayer
+      } else {
+        alert("Cant go here")
       }
     }
   }
