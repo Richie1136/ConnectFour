@@ -77,7 +77,16 @@ const winningArray = [
 ]
 
 const checkBoard = () => {
-
+  for (let i = 0; i < winningArray.length; i++) {
+    const square1 = squares[winningArray[i][0]]
+    const square2 = squares[winningArray[i][1]]
+    const square3 = squares[winningArray[i][2]]
+    const square4 = squares[winningArray[i][3]]
+    console.log(square1)
+    console.log(square2)
+    console.log(square3)
+    console.log(square4)
+  }
 }
 
 for (let i = 0; i < squares.length; i++) {
