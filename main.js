@@ -82,16 +82,23 @@ const checkBoard = () => {
     const square2 = squares[winningArray[i][1]]
     const square3 = squares[winningArray[i][2]]
     const square4 = squares[winningArray[i][3]]
-    console.log(square1)
-    console.log(square2)
-    console.log(square3)
-    console.log(square4)
+
+    // check squares to see if they all have the class of player-1
+    if (square1.classList.contains('player-1') && square2.classList.contains('player1') && square3.classList.contains('player1') && square4.classList.contains('player1')) {
+      console.log('Player 1 Wins')
+      result.innerHTML = 'Player 1 Wins'
+    }
+    // check squares to see if they all have the class of player-2
+    if (square1.classList.contains('player-2') && square2.classList.contains('player-2') && square3.classList.contains('player-2') && square4.classList.contains('player-2')) {
+      console.log('Player 1 Wins')
+      result.innerHTML = 'Player 2 Wins'
+    }
   }
 }
 
 for (let i = 0; i < squares.length; i++) {
   squares[i].onclick = () => {
-    if (squares[i + 7].classList.contains('taken')) {
+    if (squares[i + 7].classList.contains('taken') && !squares[i].classList.contains('taken')) {
       if (currentPlayer === 1) {
         squares[i].classList.add('taken')
         squares[i].classList.add('player-1')
